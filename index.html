@@ -16,22 +16,28 @@
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
-    <body>
+    <body id="BG">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="HH" style="float:left;background-color:red">
+        <div class="clock-container">
+        
+        <div id="HH" class="clock-text" style="float:left;">
         	HH
         </div>
-        <div id="MM" style="float:left;background-color:green">
+        <div class="clock-colon" style="float:left;">:</div>
+        <div id="MM" class="clock-text" style="float:left;">
         	MM
         </div>
-        <div id="SS" style="float:left;background-color:blue">
+        <div class="clock-colon" style="float:left;">:</div>
+        <div class="clock-text" id="SS" style="float:left;">
         	SS
         </div>
-
+	
+        </div>
+        
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
