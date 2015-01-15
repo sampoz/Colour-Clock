@@ -1,6 +1,8 @@
-setSeconds();
-setMinutes();
-setHours();
+$(document).ready(function() {
+	setSeconds();
+	setMinutes();
+	setHours();
+});
 
 function setSeconds () {
 	var secs = new Date().getSeconds();
@@ -25,8 +27,7 @@ function setBackground () {
 	var mins = new Date().getMinutes();
 	var secs = new Date().getSeconds();
 	$("#BG").css("background-color", ("#" + prepend(hours) 
-		+ prepend(mins) + prepend(secs)
-			));
+		+ prepend(mins) + prepend(secs)));
 }
 setInterval(setBackground, 1000);
 setInterval(setSeconds, 1000);
@@ -35,7 +36,7 @@ setInterval(setHours, 3600000);
 
 function prepend (i) {
 	i = Math.floor(i/60*255);
-	if(i<10) {
+	if(i<16) {
 		return "0"+i.toString(16); 
 	} else {
 		return i.toString(16);	
