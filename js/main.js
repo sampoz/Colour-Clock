@@ -2,6 +2,7 @@ $(document).ready(function() {
 	setSeconds();
 	setMinutes();
 	setHours();
+	setBackground();
 });
 
 function setSeconds () {
