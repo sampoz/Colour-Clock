@@ -1,3 +1,4 @@
+var debug = false;
 $(document).ready(function() {
 	setSeconds(new Date().getSeconds());
 	setMinutes(new Date().getMinutes());
@@ -70,7 +71,8 @@ var testHours = (function () {
 })();
 
 $( "body" ).keydown(function(e) {
-            if(e.keyCode == 37) { // left
+	if(debug){
+		if(e.keyCode == 37) { // left
                 setSeconds(testSecs());
             }
               else if(e.keyCode == 38) { // up?
@@ -80,4 +82,5 @@ $( "body" ).keydown(function(e) {
               else if(e.keyCode == 39) { // right
                 setHours(testHours());
             }
-        });
+	}
+});
